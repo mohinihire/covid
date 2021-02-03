@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+<br><b>
+<center><h2> Corona</h2></center><br><br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>
+     Symptoms</h3><br><br>
+      <p>Most common symptoms:<br>
+fever<br>
+dry cough<br>
+tiredness<br>
+Less common symptoms:<br>
+aches and pains<br>
+sore throat<br>
+headache<br>
+loss of taste or smell<br>
+a rash on skin, or discolouration of fingers or toes<br>
+Serious symptoms:
+difficulty breathing or shortness of breath<br>
+loss of speech or movement</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Prevention</h3><br><br>
+      <p>To prevent the spread of COVID-19:<br><br>
+Clean your hands often. Use soap and water, or an alcohol-based hand rub.<br>
+Maintain a safe distance from anyone who is coughing or sneezing.<br>
+Wear a mask when physical distancing is not possible.<br>
+Don’t touch your eyes, nose or mouth.<br>
+Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.<br>
+Stay home if you feel unwell.<br>
+If you have a fever, cough and difficulty breathing, seek medical attention.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3> About Corona </h3><br><br>
+      <p>
+        Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.<br>
+<br>
+Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. <br> Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.<br>
+The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads. 
+<br>
+      </p>
+  
+</div>
+
+</body>
+</html>

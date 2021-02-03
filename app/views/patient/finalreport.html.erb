@@ -1,0 +1,20 @@
+
+
+
+
+<div class ="report">
+   <h2> Show Report</h2>
+   <%=form_for(:doctors,url: { action:'finalreport',id:@doctor.id})do |t|%>
+   <p class="reference-name"></p>
+   
+
+      <p><%=@doctor.doctorname %></p>
+       <p><%=@doctor.dmedicine %></p>
+        <p><%=@doctor.ddescription %></p>
+         <p><%=@doctor.dmobno %></p>
+    <div class="form-button">
+    	<%=submit_tag("ok")%>
+    </div>
+    <%end %>
+</div>
+

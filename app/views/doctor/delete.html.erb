@@ -1,0 +1,14 @@
+<%=link_to "Back to list",controller:"patient" ,action:'list',class:"back-link" %>
+<div class ="patient Delete">
+   <center><h1> Delete patient</h1>
+   <%=form_for(:Doctors,url: { action:'destroy',id:@doctor.id})do |t|%>
+   <h4> are you sure want to permanently delete this Record...!!!</h4>
+
+   <h6> Doctor Id : <%=@doctor.id %></h6>
+    <div class="form-button">
+    	<%=submit_tag("Delete patient")%>
+    </div>
+    <%end %>
+</center>
+</div>
+

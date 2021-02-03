@@ -1,0 +1,46 @@
+
+<% @doctor_name="Doctor" %>
+
+<div class ="Patient Index"><br><br>
+    <h1> Patient</h1>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        th,td{
+            padding:15px;
+        }
+        h5{text-align: center;}
+    </style>
+    
+    <br>
+   <h5>
+    <table class ="listing" summary="doctor List"style="width:50%">
+    
+        <tr class="header">
+            <th> Doctorid</th>
+            <th> PatientId</th>
+            <th> Action</th>
+        </tr>
+        <tr>
+        </tr>
+        <% @doctors.each do |b| %>
+        <tr class ="<%= cycle('odd','even') %>">
+            <td> <%=b.id %></td>
+            <td> <%=b.patient_id %></td>
+           
+
+            <td class ="actions">
+                <%= link_to"Finalreport",action:'finalreport',id:b.id,class:"action finalreport"%>
+             <br>
+                <%= link_to"Delete",action:'delete',id:b.id,class:"action delete"%>
+
+            </td>
+        </tr>
+    
+    <%end%>
+</h5>
+</table>
+</div>
+

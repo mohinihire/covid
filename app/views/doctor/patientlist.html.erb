@@ -1,0 +1,46 @@
+
+
+<% @patient_name="Patient" %>
+<%=form_for(:patient_record,url:{controller:"patient",action:'list'}) do |t| %>
+<div class ="Patient Index">
+	<h1> Patient</h1>
+	<style>
+		table,th,td{
+			border:1px solid black;
+			border-collapse: collapse;
+		}
+		th,td{
+			padding:15px;
+		}
+	</style>
+
+	<br>
+	<br>
+
+	<table class ="listing" summary="patient List"style="width:50%">
+		<tr class="header">
+			<th> Name </th>
+			<th> Symptoms </th>
+			<th> Age </th>
+			<th> Mobile No</th>
+			<th> City</th>
+			<th> Action</th>
+		</tr>
+		<tr>
+		</tr>
+		<% @patients.each do |b| %>
+		<tr class ="<%= cycle('odd','even') %>">
+			<td> <%=b.name %></td>
+			<td> <%=b.symptoms %></td>
+			<td> <%=b.age %></td>
+			<td> <%=b.mobile%></td>
+			<td> <%=b.city %></td>
+
+			<td class ="actions">
+				<%= link_to"Show",action:'show',id:b.id,class:"action show"%>
+			</td>
+		</tr>
+	<%end%>
+</table>
+</div>
+
